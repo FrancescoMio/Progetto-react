@@ -43,12 +43,13 @@ ul.theList {
   display: inline-flex;
   justify-content: center;
   flex-direction: column-reverse;
+  margin-left: 450px;
 }
 
 
 .theList li {
-  color: rgb(22, 175, 48);
-  background-color: rgba(255, 255, 255, .5);
+  color: black;
+  background-color: cyan;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 5px;

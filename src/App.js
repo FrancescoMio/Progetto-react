@@ -14,7 +14,15 @@ class App extends Component {
       },
     }
   }
-  
+  deleteItem = key => {
+    const filteredItems = this.state.items.filter(item => {
+      return item.key !== key
+    })
+    this.setState({
+      items: filteredItems,
+    })
+  }
+
   handleInput = e => {
     const itemText = e.target.value
     const currentItem = { text: itemText, key: Date.now() }
@@ -22,6 +30,7 @@ class App extends Component {
       currentItem,
     })
   }
+  
   addItem = e => {
     e.preventDefault()
     const newItem = this.state.currentItem
@@ -42,7 +51,7 @@ class App extends Component {
           handleInput={this.handleInput}
           currentItem={this.state.currentItem}
         />
-        <TodoItems entries={this.state.items}/>
+        <TodoItems entries={this.state.items} deleteItem={this.deleteItem} />
       </div>
     )
   }
