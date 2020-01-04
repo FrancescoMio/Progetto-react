@@ -8,6 +8,7 @@ class TodoList extends Component {
     return (
       <div className="todoListMain">
         <div className="header">
+        <h1 id="titolo"><strong>TodoList <small>By Francesco Mio</small></strong></h1>
           <form onSubmit={this.props.addItem}>
             <input
               placeholder="Aggiungi compito..."
